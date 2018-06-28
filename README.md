@@ -33,6 +33,8 @@ c.to_stl "wemos-d1.stl"
 This will generate STL for a simple case for a Wemos D1 board, along
 with a lid.
 
+[[https://github.com/romkey/casemaker/blob/mastercura-screengrab.png|alt=case]]
+
 ## Installation
 
 Ensure that you have a usable Ruby environment on your computer.
