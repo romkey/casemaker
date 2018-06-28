@@ -33,7 +33,7 @@ c.to_stl "wemos-d1.stl"
 This will generate STL for a simple case for a Wemos D1 board, along
 with a lid.
 
-![Cura screengrab][https://github.com/romkey/casemaker/blob/master/cura-screengrab.png]
+![Cura screengrab](https://github.com/romkey/casemaker/blob/master/cura-screengrab.png)
 
 ## Installation
 
