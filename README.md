@@ -57,3 +57,7 @@ STL file, you'd run `ruby example.rb`. It leaves its output in "wemos-d1.stl".
 - libraries of parts' dimensions
 - ability to load a part from a library and automatically form a case
 around it
+
+## License
+
+MIT: https://romkey.mit-license.org/
