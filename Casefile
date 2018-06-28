@@ -1,0 +1,7 @@
+
+CaseMaker.case "Wemos D1" do
+  height 10
+  length 35
+  width	 26
+  thickness 5
+end
