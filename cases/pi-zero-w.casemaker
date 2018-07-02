@@ -1,0 +1,30 @@
+name "Raspberry Pi Zero W"
+# Pi Zero W mechanical drawings are the same as the Zero
+specs "https://github.com/raspberrypi/documentation/blob/master/hardware/raspberrypi/mechanical/rpi_MECH_Zero_1p2.pdf"
+
+length 65
+width 30
+height 10
+
+body do
+  mounts do
+    inset 3.5
+    radius 2
+  end
+
+  front do
+    knockout :pi_zero_w_power
+    knockout :pi_zero_w_usb
+  end
+
+  left do
+    knockout :pi_zero_w_microsd
+  end
+end
+
+lid do
+  knockout :pi_zero_w_gpio
+  vents
+end
+
+# needs microUSB, miniHDMI knockouts

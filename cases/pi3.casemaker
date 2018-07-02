@@ -1,0 +1,30 @@
+name "Raspberry Pi 3B Plus"
+
+specs "https://github.com/raspberrypi/documentation/blob/master/hardware/raspberrypi/mechanical/rpi_MECH_bplus_1p2.pdf"
+
+height 20
+length 85
+width 56
+thickness 5
+
+lid do
+  # leave a 0.25mm gap between the inner lid and the case walls
+  gap .25
+  vents
+  knockout :pi3bplus_gpio
+  end
+end
+
+supports do
+  height 3
+end
+
+right do
+  knockout :pi3bplus_usb
+  knockout :pi3bplus_ethernet
+  knockout :pi3bplus_power
+end
+
+left do
+  knockout :pi3bplus_microsd
+end

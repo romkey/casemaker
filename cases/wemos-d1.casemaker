@@ -1,0 +1,21 @@
+name "Wemos D1"
+spec "https://www.flickr.com/photos/143909899@N03/31400410271"
+
+height 10
+length 35
+width 26
+thickness 5
+
+body do
+  right do
+    knockout x, y, z, :microusb
+  end
+
+  supports
+end
+
+lid do
+  # leave a 0.25mm gap between the inner lid and the case walls
+  gap .25
+end
+
