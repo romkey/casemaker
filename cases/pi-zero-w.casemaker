@@ -5,6 +5,7 @@ specs "https://github.com/raspberrypi/documentation/blob/master/hardware/raspber
 length 65
 width 30
 height 10
+thickness 3
 
 body do
   mounts do
