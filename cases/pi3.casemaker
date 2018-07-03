@@ -12,7 +12,6 @@ lid do
   gap .25
   vents
   knockout :pi3bplus_gpio
-  end
 end
 
 supports do
