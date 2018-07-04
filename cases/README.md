@@ -45,7 +45,14 @@ A `body` has five walls:
 - left
 - right
 
-The body defaults to having all five walls. Each wall may be customized.
+Each wall may be customized.
+```
+body do
+  front do
+    knockout offset_x: 2, offset_z: 2, height: 4, width: 4
+  end
+end
+```
 
 A body will only be printed if specified.
 
