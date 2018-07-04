@@ -5,6 +5,36 @@
 - cases consist of an optional `body` and `lid`
 - inner dimensions: length (x), width (y), height (z)
 - wall thickness
+- name
+- link to specs for specific boards
+
+All dimensions are in mm.
+
+For example:
+```
+name "Wemos D1"
+spec "https://www.flickr.com/photos/143909899@N03/31400410271"
+
+height 10
+length 35
+width 26
+thickness 5
+
+body do
+  right do
+    knockout x, y, z, :microusb
+  end
+
+  supports do
+    height 1
+  end
+end
+
+lid do
+  # leave a 0.25mm gap between the inner lid and the case walls
+  gap .25
+end
+```
 
 ## Body
 
@@ -23,7 +53,7 @@ A body will only be printed if specified.
 
 A wall may have knockouts. A knockout has the position of its lower left corner and has dimensions. Knockouts are currently always rectangular.
 
-A knockout may reference a defined size like :microusb, :miniusb, :hdmi, :rj45
+A knockout may reference a pre-defined size like :microusb, :miniusb, :hdmi, :rj45
 
 Casemaker will throw an error if there is insufficient space for a knockout (for instance, the knockout is higher than the remaining case in its position).
 
