@@ -3,8 +3,8 @@
 **This is a proposal for syntax and features for Casemaker. Casemaker does not currently support this file format or these features.**
 
 - cases consist of an optional `body` and `lid`
-- inner dimensions: length (x), width (y), height (z)
-- wall thickness
+- inner dimensions: length (x), width (y), height (z) in mm
+- wall thickness in mm
 - name
 - link to specs for specific boards
 
