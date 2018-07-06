@@ -10,6 +10,8 @@
 
 All dimensions are in mm.
 
+The code is pure Ruby, so you can use Ruby expressions, conditionals, functions, etc, in it.
+
 For example:
 ```
 name "Wemos D1"
