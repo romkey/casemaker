@@ -10,7 +10,7 @@
 
 All dimensions are in mm.
 
-To avoid ambiguity, ll parameters are named. Knockouts and vents specify offsets in the plane of their face, from the lower left hand corner of the feature.
+To avoid ambiguity, all parameters are named. Knockouts and vents specify offsets in the plane of their face, from the lower left hand corner of the feature.
 
 The code is pure Ruby, so you can use Ruby expressions, conditionals, functions, etc, in it.
 
@@ -26,7 +26,7 @@ thickness 5
 
 body do
   right do
-    knockout offset_x: x, offset_y: y, shape: :microusb
+    knockout offset_x: x, offset_y: y, shape: :microusb, name: "power/serial"
   end
 
   supports do
