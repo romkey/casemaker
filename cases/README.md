@@ -63,11 +63,11 @@ A body will only be printed if specified.
 
 ### Knockouts
 
-A wall may have knockouts. A knockout has the position of its lower left corner and has dimensions. Knockouts are currently always rectangular.
+A wall may have knockouts. A knockout has the position of its lower left corner and has dimensions. Knockouts will initially always be rectangular; eventually we will support circular knockouts.
 
 A knockout may reference a pre-defined size or shape like :microusb, :miniusb, :hdmi, :rj45, :circle
 
-Circular knockouts also take a `radius:` parameter. Their x and y offsets are the coordinate of the lower left corner of their square bounding box.
+Circular knockouts will also take a `radius:` parameter. Their x and y offsets are the coordinate of the lower left corner of their square bounding box.
 
 Casemaker will throw an error if there is insufficient space for a knockout (for instance, the knockout is higher than the remaining case in its position).
 
