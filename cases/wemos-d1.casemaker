@@ -8,7 +8,7 @@ thickness 5
 
 body do
   right do
-    knockout x, y, z, :microusb
+    knockout offset_x: , offset_y: z, shape: :microusb
   end
 
   supports

@@ -10,6 +10,8 @@
 
 All dimensions are in mm.
 
+To avoid ambiguity, ll parameters are named. Knockouts and vents specify offsets in the plane of their face, from the lower left hand corner of the feature.
+
 The code is pure Ruby, so you can use Ruby expressions, conditionals, functions, etc, in it.
 
 For example:
@@ -24,7 +26,7 @@ thickness 5
 
 body do
   right do
-    knockout x, y, z, :microusb
+    knockout offset_x: x, offset_y: y, shape: :microusb
   end
 
   supports do
@@ -51,7 +53,8 @@ Each wall may be customized.
 ```
 body do
   front do
-    knockout offset_x: 2, offset_z: 2, height: 4, width: 4
+    knockout offset_x: 2, offset_y: 2, height: 4, width: 4
+    knockout offset_x: 20, offset_y: 20, radius: 5, shape: :circle
   end
 end
 ```
@@ -62,7 +65,9 @@ A body will only be printed if specified.
 
 A wall may have knockouts. A knockout has the position of its lower left corner and has dimensions. Knockouts are currently always rectangular.
 
-A knockout may reference a pre-defined size like :microusb, :miniusb, :hdmi, :rj45
+A knockout may reference a pre-defined size or shape like :microusb, :miniusb, :hdmi, :rj45, :circle
+
+Circular knockouts also take a `radius:` parameter. Their x and y offsets are the coordinate of the lower left corner of their square bounding box.
 
 Casemaker will throw an error if there is insufficient space for a knockout (for instance, the knockout is higher than the remaining case in its position).
 
@@ -72,14 +77,20 @@ A wall may have vents. Vents have a number of incisions and the offset of the lo
 
 ```
 vent do
-  number x
-  position x, y
+  offset_x 2
+  offset_y 2
+  width 2
+  height 5
 end
+
+vents number: 5, width: 1, offset_x: 2, offset_y: 2, height: 4
 ```
+
+All arguments are optional. Casemaker will make its best guess at how to arrange vents if options are not specified.
 
 Vents will be evenly distributed across the remaining wall.
 
-Casemaker will throw an error if there is insufficient space for the specified quantity of vents.
+Casemaker will throw an error if there is insufficient space for the specified quantity or width of vents.
 
 ### Supports
 

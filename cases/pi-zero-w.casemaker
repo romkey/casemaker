@@ -14,17 +14,17 @@ body do
   end
 
   front do
-    knockout :pi_zero_w_power
-    knockout :pi_zero_w_usb
+    knockout offset_x: , offset_y: , shape: :micro_usb, name: "power"
+    knockout offset_x: , offset_y: , shape: :usb
   end
 
   left do
-    knockout :pi_zero_w_microsd
+    knockout offset_x: , offset_y: , shape: :micro_sd
   end
 end
 
 lid do
-  knockout :pi_zero_w_gpio
+  knockout offset_x: , offset_y: , length:, height: , name: "gpio"
   vents
 end
 
